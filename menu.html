@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Roastery - Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">
+            <!-- UPDATED LOGO PATH -->
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            <div class="logo-text">THE ROASTERY</div>
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Our Menu</h1>
+        
+        <div class="menu-toggle">
+            <button class="btn" onclick="showCategory('coffee')">Coffee</button>
+            <button class="btn" onclick="showCategory('bakery')">Bakery</button>
+            <button class="btn" onclick="showCategory('supplies')">Supplies</button>
+        </div>
+
+        <!-- COFFEE-->
+        <div id="coffee-items" class="menu-grid">
+            <div class="card">
+                <img src="images/latte.jpg" alt="Latte" class="card-img">
+                <div class="card-content">
+                    <h3>Latte</h3>
+                    <p>Smooth steamed milk with espresso.</p>
+                    <span class="price">PKR 650</span>
+                    <div style="display:flex; gap:8px; justify-content:center;">
+                        <button class="btn" onclick="showQuickAdd('Latte', 650, 850)">Quick Add</button>
+                        <button class="btn" onclick="window.location.href='customize.html?coffee=Latte&basePrice=650'">Customize</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/americano.jpg" alt="Americano" class="card-img">
+                <div class="card-content">
+                    <h3>Americano</h3>
+                    <p>Espresso diluted with hot water.</p>
+                    <span class="price">PKR 500</span>
+                    <div style="display:flex; gap:8px; justify-content:center;">
+                        <button class="btn" onclick="showQuickAdd('Americano', 500, 700)">Quick Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/mocha.jpg" alt="Mocha" class="card-img">
+                <div class="card-content">
+                    <h3>Mocha</h3>
+                    <p>Chocolate flavored warm coffee.</p>
+                    <span class="price">PKR 750</span>
+                    <div style="display:flex; gap:8px; justify-content:center;">
+                        <button class="btn" onclick="showQuickAdd('Mocha', 750, 950)">Quick Add</button>
+                        <button class="btn" onclick="window.location.href='customize.html?coffee=Mocha&basePrice=750'">Customize</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/carmac.jpg" alt="Caramel Macchiato" class="card-img">
+                <div class="card-content">
+                    <h3>Caramel Macchiato</h3>
+                    <p>Vanilla, steamed milk and caramel drizzle.</p>
+                    <span class="price">PKR 800</span>
+                    <div style="display:flex; gap:8px; justify-content:center;">
+                        <button class="btn" onclick="showQuickAdd('Caramel Macchiato', 800, 1000)">Quick Add</button>
+                        <button class="btn" onclick="window.location.href='customize.html?coffee=Caramel Macchiato&basePrice=800'">Customize</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/frap.jpg" alt="Frappuccino" class="card-img">
+                <div class="card-content">
+                    <h3>Frappuccino</h3>
+                    <p>Espresso. Steamed milk with Mil foam.</p>
+                    <span class="price">PKR 800</span>
+                    <div style="display:flex; gap:8px; justify-content:center;">
+                        <button class="btn" onclick="showQuickAdd('Frappuccino', 800, 1200)">Quick Add</button>
+                        <button class="btn" onclick="window.location.href='customize.html?coffee=Frappuccino&basePrice=800'">Customize</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/cappucino.jpg" alt="Cappuccino" class="card-img">
+                <div class="card-content">
+                    <h3>Cappuccino</h3>
+                    <p>Rich espresso with foam.</p>
+                    <span class="price">PKR 600</span>
+                    <div style="display:flex; gap:8px; justify-content:center;">
+                        <button class="btn" onclick="showQuickAdd('Cappuccino', 600, 800)">Quick Add</button>
+                        <button class="btn" onclick="window.location.href='customize.html?coffee=Cappuccino&basePrice=600'">Customize</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BAKERY -->
+        <div id="bakery-items" class="menu-grid hidden">
+            <div class="card">
+                <img src="images/plain_croissant.jpg" alt="Plain Croissant" class="card-img">
+                <div class="card-content">
+                    <h3>Plain Croissant</h3>
+                    <span class="price">PKR 350</span>
+                    <button class="btn" onclick="handleMenuClick('Plain Croissant', 350, 'bakery')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/chocolate_croissant.jpg" alt="Choco Croissant" class="card-img">
+                <div class="card-content">
+                    <h3>Choco Croissant</h3>
+                    <span class="price">PKR 450</span>
+                    <button class="btn" onclick="handleMenuClick('Choco Croissant', 450, 'bakery')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/almond_croissant.jpg" alt="Almond Croissant" class="card-img">
+                <div class="card-content">
+                    <h3>Almond Croissant</h3>
+                    <span class="price">PKR 450</span>
+                    <button class="btn" onclick="handleMenuClick('Almond Croissant', 450, 'bakery')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/donut.jpg" alt="Glazed Donut" class="card-img">
+                <div class="card-content">
+                    <h3>Glazed Donut</h3>
+                    <span class="price">PKR 200</span>
+                    <button class="btn" onclick="handleMenuClick('Donut', 200, 'bakery')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/cookie.jpg" alt="Choco Chip Cookie" class="card-img">
+                <div class="card-content">
+                    <h3>Choco Chip Cookie</h3>
+                    <span class="price">PKR 200</span>
+                    <button class="btn" onclick="handleMenuClick('Cookie', 200, 'bakery')">Add to Cart</button>
+                </div>
+            </div>
+             <div class="card">
+                <img src="images/cinnroll.jpg" alt="Cinnamon Roll" class="card-img">
+                <div class="card-content">
+                    <h3>Cinnamon Roll</h3>
+                    <span class="price">PKR 300</span>
+                    <button class="btn" onclick="handleMenuClick('Cinnamon Roll', 300, 'bakery')">Add to Cart</button>
+                </div>
+            </div>
+             <div class="card">
+                <img src="images/muffin.jpg" alt="Muffin" class="card-img">
+                <div class="card-content">
+                    <h3>Muffin</h3>
+                    <span class="price">PKR 300</span>
+                    <button class="btn" onclick="handleMenuClick('Muffin', 300, 'bakery')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/tart.jpg" alt="Lemon Tart" class="card-img">
+                <div class="card-content">
+                    <h3>Lemon Tart</h3>
+                    <span class="price">PKR 450</span>
+                    <button class="btn" onclick="handleMenuClick('Lemon Tart', 450, 'bakery')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/bread.jpg" alt="Banana Bread" class="card-img">
+                <div class="card-content">
+                    <h3>Banana Bread</h3>
+                    <span class="price">PKR 350 (Slice)</span>
+                    <button class="btn" onclick="handleMenuClick('Banana Bread', 350, 'bakery')">Add to Cart</button>
+                </div>
+            </div> 
+        </div>
+
+        <!-- SUPPLIES-->
+        <div id="supplies-items" class="menu-grid hidden">
+            <div class="card">
+                <img src="images/pot.jpg" alt="Moka Pot" class="card-img">
+                <div class="card-content">
+                    <h3>Moka Pot</h3>
+                    <p>Classic stovetop coffee maker.</p>
+                    <span class="price">PKR 4000</span>
+                    <button class="btn" onclick="handleMenuClick('Moka Pot', 4000, 'supply')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/beans.jpg" alt="Coffee Beans" class="card-img">
+                <div class="card-content">
+                    <h3>Coffee Beans</h3>
+                    <p>Fresh roasted whole bean coffee.</p>
+                    <span class="price">PKR 2000 (250g)</span>
+                    <button class="btn" onclick="handleMenuClick('Coffee Beans', 2000, 'supply')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/french.jpg" alt="French Press" class="card-img">
+                <div class="card-content">
+                    <h3>French Press</h3>
+                    <p>Press pot for a rich cup.</p>
+                    <span class="price">PKR 3000</span>
+                    <button class="btn" onclick="handleMenuClick('French Press', 3000, 'supply')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/pods.jpg" alt="Coffee Pods" class="card-img">
+                <div class="card-content">
+                    <h3>Coffee Pods</h3>
+                    <p>Compatible coffee pods in various flavours.</p>
+                    <span class="price">PKR 1500 (10 pods)</span>
+                    <button class="btn" onclick="handleMenuClick('Coffee Pods', 1500, 'supply')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Email: our@theroastery.pk | Contact: 03001234098</p>
+    </footer>
+    
+    <!-- Modals -->
+    <div id="bakery-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+            <h3 id="modal-title">Customize</h3>
+            <label for="modal-quantity">Quantity</label>
+            <select id="modal-quantity"></select>
+            <div style="display:flex; gap:8px; margin-top:16px; justify-content:flex-end;">
+                <button class="btn" id="modal-add">Add to Cart</button>
+                <button class="btn" id="modal-cancel" style="background:#999;">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="supply-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+            <h3 id="supply-modal-title">Buy Supply</h3>
+            <label for="supply-pack">Size/Quantity</label>
+            <select id="supply-pack"></select>
+            <div style="display:flex; gap:8px; margin-top:16px; justify-content:flex-end;">
+                <button class="btn" id="supply-add">Add to Cart</button>
+                <button class="btn" id="supply-cancel" style="background:#999;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="quick-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-content">
+            <h3 id="quick-modal-title">Quick Add</h3>
+            <label for="quick-size">Size</label>
+            <select id="quick-size">
+                <option value="1" data-factor="1">Regular</option>
+                <option value="2" data-factor="1.5">Large</option>
+            </select>
+            <label for="quick-temp">Temperature</label>
+            <select id="quick-temp">
+                <option value="Hot">Hot</option>
+                <option value="Iced">Iced</option>
+            </select>
+            <div style="display:flex; gap:8px; margin-top:16px; justify-content:flex-end;">
+                <button class="btn" id="quick-add">Add to Cart</button>
+                <button class="btn" id="quick-cancel" style="background:#999;">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

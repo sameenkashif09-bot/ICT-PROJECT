@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - The Roastery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <nav>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            <div class="logo-text">THE ROASTERY</div>
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="container reveal-on-scroll">
+        
+        <div class="contact-hero">
+            <h1>Let's Connect</h1>
+            <p>Reach out for questions, feedback, or just to say hi.</p>
+            <div class="contact-cta">
+                <a href="phone: 03001234098" class="btn cta-phone">Call us: 03001234098</a>
+                <a href="mailto:inquiries@theroastery.pk" class="btn">Email Us</a>
+            </div>
+        </div>
+
+        <div class="contact-layout">
+            
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Send a Message</h2>
+                <form class="contact-form" role="form" aria-label="Contact form">
+                    <div class="form-row">
+                        <div style="flex:1;">
+                            <label for="first-name" class="sr-only">First name</label>
+                            <input id="first-name" name="firstName" type="text" placeholder="First Name" class="styled-input" required autocomplete="given-name">
+                        </div>
+                        <div style="flex:1;">
+                            <label for="last-name" class="sr-only">Last name</label>
+                            <input id="last-name" name="lastName" type="text" placeholder="Last Name" class="styled-input" autocomplete="family-name">
+                        </div>
+                    </div>
+                    <label for="email" class="sr-only">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Email Address" class="styled-input" required autocomplete="email">
+                    <label for="subject" class="sr-only">Subject</label>
+                    <input id="subject" name="subject" type="text" placeholder="Subject" class="styled-input">
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." rows="5" class="styled-input" required></textarea>
+                    <div style="display:flex; gap:10px; align-items:center; margin-top:10px;">
+                        <button type="submit" class="btn" style="flex:1;">Send Message</button>
+                        <button type="reset" class="btn" style="background:#eee; color:var(--primary); border:1px solid rgba(0,0,0,0.06);">Reset</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Card -->
+            <aside class="contact-info-card" aria-labelledby="contact-info-heading">
+                <h2 id="contact-info-heading" class="sr-only">Contact Information</h2>
+                <div class="info-item">
+                    <h3>Direct Line</h3>
+                    <p><a href="tel:+92300893210">0300 893 210</a></p>
+                    <p><a href="tel:+92411111222333">041 111 222 333</a></p>
+                </div>
+
+                <!-- Info/Email -->
+                <div class="info-item">
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:inquiries@theroastery.pk">inquiries@theroastery.pk</a></p>
+                    <p><a href="mailto:careers@theroastery.pk">careers@theroastery.pk</a></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Headquarters</h3>
+                    <p>D-Ground, Faisalabad,<br>Pakistan</p>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="info-item">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/the.roastery2" class="social-link" aria-label="Instagram" target="_blank">IG</a>
+                        <a href="https://www.linkedin.com" class="social-link" aria-label="LinkedIn" target="_blank">in</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <h3>Opening Hours(Main Branch)</h3>
+                    <p>Mon − Fri: 8:00 AM – 11:00 PM</p>
+                    <p>Sat − Sun: 9:00 AM – 01:00 AM</p>
+                </div>
+
+                <!-- Maps -->
+                <div class="contact-map" aria-hidden="false">
+                    <iframe src="https://maps.google.com/maps?q=D-Ground%20Faisalabad%20Pakistan&z=14&output=embed" loading="lazy"></iframe>
+                </div>
+            </aside>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="contact-success" class="contact-success hide" role="status" aria-live="polite">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="opacity:0.9">
+            <path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Thank you! Your message was sent, we'll be in touch soon.</span>
+    </div>
+        <footer>
+            <p>Email: our@theroastery.pk | Contact: 03001234098</p>
+            <div style="margin-top:8px;">
+                <button id="toggle-beans" class="btn btn-outline" style="padding:6px 12px; font-size:0.85rem;">Toggle Background Beans</button>
+            </div>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>

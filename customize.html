@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customize - The Roastery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            <div class="logo-text">THE ROASTERY</div>
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 id="coffee-title" style="text-align:center; font-size:2.5rem;">Craft Your Masterpiece</h1>
+
+        <div class="maker-container reveal-on-scroll">
+            <!-- Visual Cup -->
+            <div class="cup-spotlight">
+                <div class="cup-glass" id="cup-content">
+                    <!-- Ingredients animate here -->
+                </div>
+            </div>
+
+             <!-- Milk Options -->
+            <div class="controls">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                    <h3 style="margin:0;">Ingredients</h3>
+                    <span style="font-size:1.4rem; color:var(--primary); font-weight:bold;">PKR <span id="total-price">0</span></span>
+                </div>
+                
+                <label>Choose Milk Base</label>
+                <select id="milk-select" onchange="updateMilk(this)" style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;">
+                    <option value="Whole" data-cost="0">Whole Milk (Standard)</option>
+                    <option value="Skim" data-cost="0">Skim Milk (Light)</option>
+                    <option value="Almond" data-cost="0.60">Almond Milk (+$0.60)</option>
+                    <option value="Oat" data-cost="0.70">Oat Milk (+$0.70)</option>
+                </select>
+
+               <!-- Coffee Bean Options -->
+
+                <label>Coffee Intensity</label>
+                <select id="bean-select" onchange="updateBean(this)" style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;">
+                    <option value="House Blend" data-cost="0">House Blend (Balanced)</option>
+                    <option value="Dark Roast" data-cost="0.50">Dark Roast (Strong +$0.50)</option>
+                    <option value="Single Origin" data-cost="1.00">Single Origin (Premium +$1.00)</option>
+                </select>
+
+                <!-- Flavour Options -->
+                <label>Add Flavors</label>
+                <div class="syrup-group">
+                    <label><input type="checkbox" value="Vanilla" data-cost="0.40" onchange="toggleSyrup(this)"> <span>Vanilla</span></label>
+                    <label><input type="checkbox" value="Caramel" data-cost="0.50" onchange="toggleSyrup(this)"> <span>Caramel</span></label>
+                    <label><input type="checkbox" value="Hazelnut" data-cost="0.50" onchange="toggleSyrup(this)"> <span>Hazelnut</span></label>
+                </div>
+
+                <label>Extras</label>
+                <div style="display:flex; gap:10px; margin-top:5px;">
+                    <button class="btn" style="padding:8px 15px; font-size:0.8rem; background: #999;" onclick="addIng('icecube', 0.20)">+ Ice</button>
+                    <button class="btn" style="padding:8px 15px; font-size:0.8rem; background: #999;" id="btn-boba" onclick="addIng('boba', 1.00)" title="Add or remove boba pearls" aria-pressed="false">+ Boba</button>
+                    <button class="btn" style="padding:8px 15px; font-size:0.8rem; background: #999;" id="btn-foam" onclick="addIng('foam', 0.30)" title="Add or remove foam" aria-pressed="false">+ Foam</button>
+                </div>
+                
+                <hr style="margin: 20px 0; border:0; border-top:1px solid #eee;">
+                
+                <div style="display:flex; gap:15px;">
+                    <button class="btn" style="flex:1;" onclick="mixCoffee()">Mix It</button>
+                    <button class="btn" style="flex:1; background-color: var(--text-dark);" onclick="resetCup()">Reset</button>
+                </div>
+                
+                <button class="btn" style="width:100%; margin-top:15px; background-color: var(--accent-pink);" onclick="finishCustomization()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Email: our@theroastery.pk | Contact: 03001234098</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

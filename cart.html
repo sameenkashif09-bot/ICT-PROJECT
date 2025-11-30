@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cart - The Roastery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="Logo" class="logo-img">
+            <div class="logo-text">THE ROASTERY</div>
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="container reveal-on-scroll">
+        <h1 style="text-align:center; margin-bottom: 30px;">Complete Your Order</h1>
+        
+        <div class="cart-container">
+            <!-- Order Summary-->
+            <div class="cart-card">
+                <div class="cart-header">
+                    <span>Order Summary</span>
+                    <span>Total: PKR <span id="final-total">0</span></span>
+                </div>
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60%;">Item Details</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                    </tbody>
+                </table>
+                <div id="empty-msg" style="padding:20px; text-align:center; display:none;">Your cart is empty.</div>
+            </div>
+
+            <!-- Checkout Form-->
+            <div class="cart-card checkout-form">
+                <h2>Delivery Details</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required placeholder="e.g. Ali Khan">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="tel" required placeholder="0300 1234567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Delivery Address</label>
+                        <textarea rows="3" required placeholder="House #, Street, City"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <div style="display:flex; gap:20px; align-items:center;">
+                            <label style="display:flex; align-items:center; gap:8px; font-weight:normal;">
+                                <input type="radio" name="pay" value="cash" checked> Cash on Delivery
+                            </label>
+                            <label style="display:flex; align-items:center; gap:8px; font-weight:normal;">
+                                <input type="radio" name="pay" value="card"> Credit/Debit Card
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Card details (hidden unless card selected) -->
+                    <div class="card-details" style="display:none;">
+                        <div class="form-group">
+                            <label>Cardholder Name</label>
+                            <input type="text" id="card-name" placeholder="Name on card">
+                        </div>
+                        <div class="form-group">
+                            <label>Card Number</label>
+                            <input type="text" id="card-number" inputmode="numeric" placeholder="1234 5678 9012 3456">
+                        </div>
+                        <div style="display:flex; gap:10px;">
+                            <div class="form-group" style="flex:1; margin:0;">
+                                <label>Expiry (MM/YY)</label>
+                                <input type="text" id="card-expiry" placeholder="MM/YY">
+                            </div>
+                            <div class="form-group" style="width:100px; margin:0;">
+                                <label>CVV</label>
+                                <input type="text" id="card-cvv" inputmode="numeric" placeholder="123">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; margin-top:10px;">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Email: our@theroastery.pk | Contact: 03001234098</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
